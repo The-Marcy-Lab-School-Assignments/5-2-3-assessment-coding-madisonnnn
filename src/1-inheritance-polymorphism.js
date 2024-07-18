@@ -46,8 +46,6 @@ class AppleIPhone extends Phone{
     if(!(contact instanceof AppleIPhone)) return 'Message could not be sent.'
     return `Message: ${message} - sent from ${this.model}`
   }
-  
-  
 }
 
 module.exports = {
