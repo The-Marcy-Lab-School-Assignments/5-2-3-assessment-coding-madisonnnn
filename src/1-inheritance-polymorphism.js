@@ -13,21 +13,21 @@ class Phone {
   }
   makeCall(contact) {
     if (typeof contact === 'string' && /^\d{10}$/.test(contact)) {
-      const callThis = this.contacts.find((person) => person.phoneNumber === contact);
+      const callThis = this.contacts.find((person) => person.phoneNumber === contact)
       if (callThis) {
-        return `Calling ${callThis.name}...`;
+        return `Calling ${callThis.name}...`
       } else {
-        return `Calling ${contact}...`;
+        return `Calling ${contact}...`
       }
     } else if (typeof contact === 'string') {
-      const callThis = this.contacts.find((person) => person.name === contact);
+      const callThis = this.contacts.find((person) => person.name === contact)
       if (callThis) {
-        return `Calling ${callThis.name}...`;
+        return `Calling ${callThis.name}...`
       } else {
-        return 'Invalid';
+        return 'Invalid'
       }
     }
-    return 'Invalid';
+    return 'Invalid'
   }
   removeContact(contact){
     const deleteThis = this.contacts.find((person) => person.name === contact)
